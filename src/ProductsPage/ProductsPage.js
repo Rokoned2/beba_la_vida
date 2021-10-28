@@ -31,7 +31,8 @@ const ProductsPage = () => {
           }
         );
 
-        setDrinks(data === null ? [] : data.drinks);
+        console.log("data ", data);
+        setDrinks(data.drinks === null ? [] : data.drinks);
       } catch (error) {
         console.log(error);
       }
