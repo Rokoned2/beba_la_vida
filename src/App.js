@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Cart from "./Cart";
+import { Cart } from "./CartPage";
 import { CartContext } from "./CartContext";
 import Navbar from "./Navbar";
-import ProductsPage from "./ProductsPage";
+import { ProductsPage } from "./ProductsPage";
 
 const App = () => {
   return (
     <CartContext>
-      <div className="w-full min-h-screen">
+      <div className="w-full h-full min-h-screen">
         <Router>
           <Navbar />
           <Switch>
