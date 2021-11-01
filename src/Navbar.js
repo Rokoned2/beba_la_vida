@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-between items-center bg-blue-700 px-6">
-      <div className="flex justify-center items-center px-4 py-2 cursor-pointer">
+      <div className="flex justify-center items-center  py-2 cursor-pointer">
         {/* <div className="font-bold text-3xl text-white">Beba la Vida</div> */}
         <img className=" h-16 text-white fill-current" src={logo} alt="" />
       </div>

@@ -3,7 +3,10 @@ import { IoCloseOutline } from "react-icons/io5";
 
 const CartModalItem = ({ id, photo, name, amount, price, dispatch }) => {
   return (
-    <div className=" flex w-full justify-between py-2 text-xs " key={id}>
+    <div
+      className=" flex w-full justify-between py-2 text-xs transition-all hover:bg-gray-100"
+      key={id}
+    >
       <div className="flex w-3/6">
         <div className="pr-3">
           <img src={photo} alt="" className="w-20" />
