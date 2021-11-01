@@ -110,7 +110,7 @@ const ProductsPage = () => {
           </div>
         ) : (
           <>
-            <ul className=" flex flex-wrap mx-auto w-full h-full min-h-full mb-7">
+            <ul className=" flex flex-wrap mx-auto w-full h-full min-h-full  sm:mb-7">
               {displayProducts}
             </ul>
             <ReactPaginate
