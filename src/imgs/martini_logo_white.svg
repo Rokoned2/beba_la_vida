@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2021 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="2244px" height="1063px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 224400 106295"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:none;fill-rule:nonzero}
+    .fil2 {fill:#FEFEFE;fill-rule:nonzero}
+    .fil1 {fill:white;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g id="__x0023_Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <polyline class="fil0" points="71681,70670 4345,70670 4345,32936 71681,32936 "/>
+  <path class="fil0" d="M71681 32936c7148,-15254 22635,-25847 40531,-25847 17844,0 33357,10593 40505,25847"/>
+  <polyline class="fil0" points="152717,32936 220054,32936 220054,70670 152717,70670 "/>
+  <path class="fil0" d="M152717 70670c-7148,15203 -22661,25821 -40505,25821 -17896,0 -33383,-10618 -40531,-25821"/>
+  <path class="fil1" d="M99936 39488l-13001 0 0 24630 6164 0 0 -5335 4713 0 2383 5335 6423 0 -3030 -5827c7588,-2487 6604,-18803 -3652,-18803zm-1165 14892l0 0 -5672 0 0 -10489 5749 0c4869,0 5905,10489 -77,10489z"/>
+  <path class="fil2" d="M112212 94911c17677,0 32935,-10757 39566,-26054l-79157 0c6632,15297 21895,26054 39591,26054z"/>
+  <polygon class="fil1" points="146916,39488 146916,64118 153313,64118 153313,39488 "/>
+  <path class="fil1" d="M69166 54320l210 630 -170 0c121,1659 337,3292 642,4895l1263 0 1606 4273 6837 0 -8937 -23674c-993,3625 -1526,7438 -1526,11372 0,841 27,1675 75,2504z"/>
+  <path class="fil2" d="M112212 8669c-17698,0 -32962,10759 -39594,26080l79162 0c-6630,-15321 -21890,-26080 -39568,-26080z"/>
+  <polygon class="fil1" points="117780,44927 124229,44927 124229,64118 130652,64118 130652,44927 137256,44927 137256,39488 117780,39488 "/>
+  <path class="fil1" d="M66760 47103l-52 0 -2641 7847 5139 0c-15,-210 -28,-420 -40,-630l-2406 -7217z"/>
+  <path class="fil2" d="M218370 34749l-66590 0c2267,5238 3527,11009 3527,17067 0,6047 -1261,11809 -3529,17041l66592 0 0 -34108zm-30457 29369l0 0 -6397 0 -11757 -15073 -52 0 0 15073 -6397 0 0 -24630 6397 0 11732 15073 77 0 0 -15073 6397 0 0 24630zm19890 0l0 0 -6396 0 0 -24630 6396 0 0 24630z"/>
+  <path class="fil2" d="M62280 59845l-1684 4273 -6811 0 9479 -24630 6993 0 360 956c536,-1957 1207,-3859 2001,-5695l-66590 0 0 34108 66593 0c-1240,-2859 -2178,-5877 -2773,-9012l-7568 0zm-17559 4273l0 0 -6320 0 0 -16316 -7769 10385 -7615 -10385 0 16316 -6448 0 0 -24655 6526 0 7563 10359 7640 -10359 6423 0 0 24655z"/>
+ </g>
+</svg>

@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { DispatchContext, StateContext } from "./CartContext";
+import logo from "./imgs/martini_logo_white.svg";
 
 const Navbar = () => {
   const dispatch = useContext(DispatchContext);
@@ -11,19 +12,17 @@ const Navbar = () => {
   }, [dispatch, state.state.cart]);
 
   return (
-    <div className="flex justify-between items-center bg-blue-500 bg-opacity-50 px-6">
-      <Link className="flex justify-center items-center p-4" to="/">
-        <div className="font-bold text-3xl text-white">Beba la Vida</div>
-      </Link>
-      <Link
-        className="flex justify-center items-center p-4 relative "
-        to="/carrito"
-      >
-        <FaShoppingCart className="text-3xl" />
-        <div className="rounded-full bg-blue-700 h-6 w-6 flex items-center justify-center text-white absolute	top-1 right-1">
+    <div className="flex justify-between items-center bg-blue-700 px-6">
+      <div className="flex justify-center items-center px-4 py-2 cursor-pointer">
+        {/* <div className="font-bold text-3xl text-white">Beba la Vida</div> */}
+        <img className=" h-16 text-white fill-current" src={logo} alt="" />
+      </div>
+      <div className="flex justify-center items-center p-4 relative cursor-pointer">
+        <FaShoppingCart className="text-3xl text-white" />
+        <div className="rounded-full bg-blue-500 h-6 w-6 flex items-center text-white font-bold justify-center absolute	top-1 right-1">
           {state.state.amount}
         </div>
-      </Link>
+      </div>
     </div>
   );
 };

@@ -1,23 +1,22 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Cart } from "./CartPage";
+import React, { Suspense } from "react";
 import { CartContext } from "./CartContext";
 import Navbar from "./Navbar";
 import { ProductsPage } from "./ProductsPage";
 
 const App = () => {
   return (
-    <CartContext>
-      <div className="w-full h-full min-h-screen">
-        <Router>
+    <Suspense
+      fallback={
+        <div className="w-16 h-16 border-b-2 border-white rounded-full animate-spin  inset-0	absolute m-auto "></div>
+      }
+    >
+      <CartContext>
+        <div className="w-full h-full min-h-screen">
           <Navbar />
-          <Switch>
-            <Route exact path="/" component={ProductsPage} />
-            <Route exact path="/carrito" component={Cart} />
-          </Switch>
-        </Router>
-      </div>
-    </CartContext>
+          <ProductsPage />
+        </div>
+      </CartContext>
+    </Suspense>
   );
 };
 
