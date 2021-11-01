@@ -1,5 +1,6 @@
-import { Transition } from "@headlessui/react";
 import React, { useContext } from "react";
+import ReactDom from "react-dom";
+import { Transition } from "@headlessui/react";
 import { DispatchContext, StateContext } from "../CartContext";
 import CartModalItem from "./CartModalItem";
 
@@ -21,7 +22,7 @@ const CartModal = ({ closeModal, showModal }) => {
     )
   );
 
-  return (
+  return ReactDom.createPortal(
     <Transition
       show={showModal}
       enter="transition-opacity duration-200"
@@ -77,7 +78,8 @@ const CartModal = ({ closeModal, showModal }) => {
           </div>
         </div>
       </div>
-    </Transition>
+    </Transition>,
+    document.getElementById("portal")
   );
 };
 
