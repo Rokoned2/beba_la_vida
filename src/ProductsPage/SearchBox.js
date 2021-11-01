@@ -3,7 +3,7 @@ import { BsSearch } from "react-icons/bs";
 
 const SearchBox = ({ setTerm }) => {
   return (
-    <div className="relative flex w-full flex-wrap items-stretch mb-8 max-w-xl">
+    <div className="relative flex w-full flex-wrap items-stretch my-10 max-w-xl">
       <BsSearch
         className="
       z-10

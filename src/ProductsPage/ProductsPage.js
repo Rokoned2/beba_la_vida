@@ -72,7 +72,7 @@ const ProductsPage = () => {
     .map((item) => {
       return (
         <li
-          className="mb-6 px-10 sm:my-2 sm:px-2 lg:my-4 lg:px-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
+          className="mb-12 px-10 sm:my-2 sm:px-2 lg:my-4 lg:px-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
           key={item.idDrink}
         >
           <ProductItem
