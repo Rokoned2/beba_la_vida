@@ -33,10 +33,10 @@ const CartModal = ({ closeModal, showModal }) => {
       leaveTo="opacity-0"
     >
       <div className=" fixed w-full inset-0 z-50	 overflow-hidden flex justify-center items-center bg-black bg-opacity-70 	">
-        <div className=" border border-blue-500 modal-container bg-white w-11/12 sm:w-10/12 max-w-2xl	 md:w-10/12 lg:w-1/2 mx-auto rounded-lg shadow-lg z-50 overflow-y-auto">
+        <div className=" border border-primary modal-container bg-white w-11/12 sm:w-10/12 max-w-2xl	 md:w-10/12 lg:w-1/2 mx-auto rounded-lg shadow-lg z-50 overflow-y-auto">
           <div className="modal-content py-4 text-left px-6">
             <div className="flex justify-between items-center pb-3">
-              <p className="text-2xl font-bold text-gray-500">Tu Carrito</p>
+              <p className="text-2xl font-bold primary">Tu Carrito</p>
               <div className=" cursor-pointer z-50" onClick={closeModal}>
                 <svg
                   className="fill-current text-gray-500"
@@ -68,7 +68,7 @@ const CartModal = ({ closeModal, showModal }) => {
                   Seguir comprando
                 </button>
                 <button
-                  className="px-4 bg-blue-500 py-1.5 ml-3 rounded-md text-white hover:bg-teal-400"
+                  className="px-4 bg-primary py-1.5 ml-3 rounded-md text-white hover:bg-teal-400"
                   onClick=""
                 >
                   Pagar

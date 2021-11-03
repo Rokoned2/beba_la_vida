@@ -8,12 +8,11 @@ import loader from "../imgs/drink_loader.svg";
 import Banner from "./Banner";
 import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
 
-const ProductsPage = () => {
+const ProductsPage = ({ showModal, setShowModal }) => {
   const [term, setTerm] = useState("a");
   const [loading, setLoading] = useState(false);
   const [debouncedTerm, setDebouncedTerm] = useState(term);
   const [items, setDrinks] = useState([]);
-  const [showModal, setShowModal] = useState(false);
 
   //pagination
   const [pageNumber, setPageNumber] = useState(0);
@@ -77,6 +76,7 @@ const ProductsPage = () => {
         >
           <ProductItem
             id={item.idDrink}
+            category={item.strCategory}
             name={item.strDrink}
             photo={item.strDrinkThumb}
             product={item}
@@ -90,7 +90,7 @@ const ProductsPage = () => {
   return (
     <div className="mt-18 pt-16">
       <Banner />
-      <div className="h-full min-h-full   text-black p-6 lg:pt-10 w-full max-w-5xl flex flex-col items-center pb-24  md:pb-16  mx-auto">
+      <div className="h-full min-h-full   text-black p-6 lg:pt-10 w-full max-w-6xl flex flex-col items-center pb-24  md:pb-16  mx-auto">
         <CartModal
           showModal={showModal}
           closeModal={() => setShowModal(false)}
@@ -106,11 +106,11 @@ const ProductsPage = () => {
           </div>
         ) : items.length === 0 || items === null ? (
           <div className="h-80 flex items-center">
-            <h1>No se encontró un resultado</h1>
+            <h1 className="text-xl">No se encontró un resultado</h1>
           </div>
         ) : (
           <>
-            <ul className=" flex flex-wrap mx-auto w-full h-full min-h-full  sm:mb-7">
+            <ul className=" flex flex-wrap mx-auto w-full h-full min-h-full sm:mb-7 ">
               {displayProducts}
             </ul>
             <ReactPaginate
@@ -118,9 +118,9 @@ const ProductsPage = () => {
               nextLabel={<MdNavigateNext className="text-xl" />}
               pageCount={pageCount}
               onPageChange={changePage}
-              pageClassName="w-8 h-8 rounded-full border border-gray-600 flex justify-center items-center"
+              pageLinkClassName="w-8 h-8 rounded-full border border-gray-600 flex justify-center items-center"
               containerClassName="flex justify-center space-x-2 items-center pt-2 w-full text-gray-700 "
-              activeClassName="bg-blue-600  text-white"
+              activeClassName="bg-primary text-white w-8 h-8 rounded-full border border-gray-600 flex justify-center items-center"
               disabledClassName="opacity-100"
             />
           </>

@@ -1,9 +1,10 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import { CartContext } from "./CartContext";
 import Navbar from "./Navbar";
 import { ProductsPage } from "./ProductsPage";
 
 const App = () => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <Suspense
       fallback={
@@ -12,8 +13,8 @@ const App = () => {
     >
       <CartContext>
         <div className="w-full h-full min-h-screen">
-          <Navbar />
-          <ProductsPage />
+          <Navbar showModal={() => setShowModal(true)} />
+          <ProductsPage showModal={showModal} setShowModal={setShowModal} />
         </div>
       </CartContext>
     </Suspense>

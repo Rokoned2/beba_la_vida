@@ -11,7 +11,8 @@ const SearchBox = ({ setTerm }) => {
       leading-snug
       font-normal
       absolute
-      text-center text-gray-400
+      text-center 
+      text-gray-600
       bg-transparent
       rounded
       text-base
@@ -38,7 +39,8 @@ const SearchBox = ({ setTerm }) => {
       border-solid
       border border-gray-400
       outline-none
-      focus:outline-none focus:ring
+      focus:outline-none focus:ring-2
+      ring-primary 
       w-full
       pl-10
     "

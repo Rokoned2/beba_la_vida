@@ -1,5 +1,3 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
-
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
@@ -8,7 +6,7 @@ module.exports = {
       sm: "500px",
       //   // => @media (min-width: 640px) { ... }
 
-      md: "700px",
+      md: "712px",
       //   // => @media (min-width: 768px) { ... }
 
       lg: "1024px",
