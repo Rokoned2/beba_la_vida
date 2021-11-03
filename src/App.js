@@ -1,3 +1,4 @@
+import "aos/dist/aos.css";
 import React, { Suspense, useState } from "react";
 import { CartContext } from "./CartContext";
 import Navbar from "./Navbar";

@@ -7,6 +7,7 @@ import SearchBox from "./SearchBox";
 import loader from "../imgs/drink_loader.svg";
 import Banner from "./Banner";
 import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
+import Aos from "aos";
 
 import { useMediaQuery } from "react-responsive";
 
@@ -26,6 +27,10 @@ const ProductsPage = ({ showModal, setShowModal }) => {
   const changePage = ({ selected }) => {
     setPageNumber(selected);
   };
+
+  useEffect(() => {
+    Aos.init({ duration: 800 });
+  });
 
   useEffect(() => {
     if (showModal) {
@@ -78,6 +83,7 @@ const ProductsPage = ({ showModal, setShowModal }) => {
       return (
         <li
           className="mb-12 px-10 sm:my-2 sm:px-2 lg:my-4 lg:px-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
+          data-aos="fade"
           key={item.idDrink}
         >
           <ProductItem

@@ -54,7 +54,11 @@ const CartModal = ({ closeModal, showModal }) => {
                 id="add_caretaker_form"
                 className="w-full h-52 max-h-56 overflow-auto divide-y"
               >
-                {displayProducts}
+                {state.state.cart.length !== 0 ? (
+                  displayProducts
+                ) : (
+                  <h4 className="py-auto">No hay productos en el carrito</h4>
+                )}
               </div>
               <div className="text-right my-6 mr-3">
                 <b>Total: </b>
