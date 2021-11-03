@@ -67,10 +67,7 @@ const CartModal = ({ closeModal, showModal }) => {
                 >
                   Seguir comprando
                 </button>
-                <button
-                  className="px-4 bg-primary py-1.5 ml-3 rounded-md text-white hover:bg-teal-400"
-                  onClick=""
-                >
+                <button className="px-4 bg-primary py-1.5 ml-3 rounded-md text-white hover:bg-teal-400">
                   Pagar
                 </button>
               </div>

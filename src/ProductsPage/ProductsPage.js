@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import ReactPaginate from "react-paginate";
 import ProductItem from "./ProductItem";
-import axios from "axios";
 import CartModal from "./CartModal";
 import SearchBox from "./SearchBox";
 import loader from "../imgs/drink_loader.svg";
 import Banner from "./Banner";
 import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
 
+import { useMediaQuery } from "react-responsive";
+
 const ProductsPage = ({ showModal, setShowModal }) => {
   const [term, setTerm] = useState("a");
   const [loading, setLoading] = useState(false);
   const [debouncedTerm, setDebouncedTerm] = useState(term);
   const [items, setDrinks] = useState([]);
+  const isBigScreen = useMediaQuery({ minDeviceWidth: 1224 });
 
   //pagination
   const [pageNumber, setPageNumber] = useState(0);
@@ -27,11 +30,14 @@ const ProductsPage = ({ showModal, setShowModal }) => {
   useEffect(() => {
     if (showModal) {
       document.body.style.overflow = "hidden";
-    }
-    return () => {
+      if (isBigScreen) {
+        document.body.style.paddingRight = "17px";
+      }
+    } else {
       document.body.style.overflow = "unset";
-    };
-  }, [showModal]);
+      document.body.style.paddingRight = "0px";
+    }
+  }, [showModal, isBigScreen]);
 
   useEffect(() => {
     const timerId = setTimeout(() => {
