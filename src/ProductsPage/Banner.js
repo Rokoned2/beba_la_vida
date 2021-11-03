@@ -9,7 +9,7 @@ const Banner = () => {
         src={banner}
         alt="banner"
       />
-      <span className="text-5xl  sm:text-7xl absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 transform  text-white font-serif font-medium	">
+      <span className="text-5xl sm:text-7xl font-bold absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 transform  text-white  font-spectral stroke-2	">
         Productos
       </span>
     </div>

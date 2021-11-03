@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
@@ -18,10 +20,22 @@ module.exports = {
       "2xl": "1536px",
       //   // => @media (min-width: 1536px) { ... }
     },
-    extend: {},
+    extend: {
+      backgroundColor: ["active"],
+      colors: {
+        primary: {
+          DEFAULT: "#A23F25",
+        },
+      },
+      fontFamily: {
+        spectral: ["Spectral"],
+      },
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ["active"],
+    },
   },
   plugins: [],
 };
