@@ -1,5 +1,6 @@
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  mode: "jit",
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
@@ -19,10 +20,15 @@ module.exports = {
       //   // => @media (min-width: 1536px) { ... }
     },
     extend: {
+      backgroundImage: {
+        "header-banner": "url('./imgs/bg_2.jpg')",
+      },
       backgroundColor: ["active"],
       colors: {
         primary: {
           DEFAULT: "#A23F25",
+          dark: "#502417",
+          light: "#eecec4",
         },
       },
       fontFamily: {
@@ -35,5 +41,5 @@ module.exports = {
       backgroundColor: ["active"],
     },
   },
-  plugins: [],
+  plugins: [require("@kamona/tailwindcss-perspective")],
 };

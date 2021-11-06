@@ -32,7 +32,7 @@ const CartModal = ({ closeModal, showModal }) => {
       leaveFrom="opacity-100"
       leaveTo="opacity-0"
     >
-      <div className=" fixed w-full inset-0 z-50	 overflow-hidden flex justify-center items-center bg-black bg-opacity-70 	">
+      <div className=" fixed w-full inset-0 z-50	 overflow-hidden flex justify-center items-center bg-black bg-opacity-30 backdrop-filter backdrop-blur ">
         <div className=" border border-primary modal-container bg-white w-11/12 sm:w-10/12 max-w-2xl	 md:w-10/12 lg:w-1/2 mx-auto rounded-lg shadow-lg z-50 overflow-y-auto">
           <div className="modal-content py-4 text-left px-6">
             <div className="flex justify-between items-center pb-3">
@@ -52,12 +52,14 @@ const CartModal = ({ closeModal, showModal }) => {
             <div className="mt-2 mx-1 flex flex-col justify-center">
               <div
                 id="add_caretaker_form"
-                className="w-full h-52 max-h-56 overflow-auto divide-y"
+                className="w-full h-52 max-h-56 overflow-auto divide-y relative"
               >
                 {state.state.cart.length !== 0 ? (
                   displayProducts
                 ) : (
-                  <h4 className="py-auto">No hay productos en el carrito</h4>
+                  <h4 className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 transform">
+                    No hay productos en el carrito
+                  </h4>
                 )}
               </div>
               <div className="text-right my-6 mr-3">

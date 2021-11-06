@@ -107,6 +107,7 @@ const ProductsPage = ({ showModal, setShowModal }) => {
           showModal={showModal}
           closeModal={() => setShowModal(false)}
         />
+
         <SearchBox setTerm={setTerm} />
         {loading ? (
           <div className="h-80 flex">
