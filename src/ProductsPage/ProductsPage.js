@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ReactPaginate from "react-paginate";
+import { Transition } from "@headlessui/react";
 import ProductItem from "./ProductItem";
 import CartModal from "./CartModal";
 import SearchBox from "./SearchBox";
@@ -131,7 +132,7 @@ const ProductsPage = ({ showModal, setShowModal }) => {
               nextLabel={<MdNavigateNext className="text-xl" />}
               pageCount={pageCount}
               onPageChange={changePage}
-              pageLinkClassName="w-8 h-8 rounded-full border border-gray-600 flex justify-center items-center"
+              pageLinkClassName="w-8 h-8 rounded-full border transition-all  border-gray-600 flex justify-center items-center hover:bg-primary-dark hover:text-white"
               containerClassName="flex justify-center space-x-2 items-center pt-2 w-full text-gray-700 "
               activeClassName="bg-primary text-white w-8 h-8 rounded-full border border-gray-600 flex justify-center items-center"
               disabledClassName="opacity-100"

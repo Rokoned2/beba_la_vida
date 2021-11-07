@@ -66,14 +66,14 @@ const CartModal = ({ closeModal, showModal }) => {
                 <b>Total: </b>
                 <span>S/ {state.state.total}</span>
               </div>
-              <div className="flex justify-end p-2 space-x-6">
+              <div className="text-xs sm:text-base flex justify-end p-2 space-x-6">
                 <button
                   onClick={closeModal}
                   className="px-4 bg-gray-200 py-1.5 rounded text-black hover:bg-gray-300 font-semibold"
                 >
                   Seguir comprando
                 </button>
-                <button className="px-4 bg-primary py-1.5 ml-3 rounded-md text-white hover:bg-teal-400">
+                <button className="btn relative btn--primary-dark btn--rounded px-4 bg-primary py-1.5 ml-3 rounded-md text-white hover:bg-teal-400">
                   Pagar
                 </button>
               </div>

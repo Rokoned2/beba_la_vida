@@ -7,18 +7,10 @@
   width: 100%;
   height: auto;
   background-color: transparent;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px;
   -moz-perspective: 1000px;
 }
 
-/* .flip-card:after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
-} */
-
-/* This container is needed to position the front and back side */
 .flip-card__inner {
   position: relative;
   width: 100%;
@@ -28,12 +20,12 @@
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card__inner {
-  transform: rotateY(180deg);
+@media (min-width: 712px) {
+  .flip-card:hover .flip-card__inner {
+    transform: rotateY(180deg);
+  }
 }
 
-/* Position the front and back side */
 .flip-card__front,
 .flip-card__back {
   position: absolute;
@@ -50,8 +42,6 @@
 .flip-card__front {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  /* background-color: #bbb; */
-  /* color: black; */
 }
 
 /* Style the back side */
@@ -74,8 +64,24 @@
   height: 75vh;
 }
 
-.btn {
+.banner__text {
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #fff;
+}
+
+.banner__text:hover {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+// BUTTON
+
+.btn,
+.btn:link,
+.btn:visited {
   transition: all 0.2s;
+  position: relative;
 }
 
 .btn:hover {
@@ -87,10 +93,135 @@
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
+.btn--primary-dark::after {
+  background-color: #502417;
+}
 
 .btn:active,
 .btn:focus {
   outline: none;
   transform: translateY(-1px);
   /* box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2); */
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.btn--rounded-full::after {
+  border-radius: 10rem;
+}
+
+.btn--rounded::after {
+  border-radius: 0.375rem;
+}
+
+// NAV MENU
+
+.nav__checkbox {
+  display: none;
+}
+
+.nav__button {
+  background-color: white;
+  position: fixed;
+  border-radius: 50%;
+  z-index: 2000;
+  /* box-shadow: 0 1rem 3rem rgba($color-black, 0.1); */
+  text-align: center;
+  cursor: pointer;
+}
+
+.nav__icon {
+  position: relative;
+  margin: 1.7rem 0;
+}
+
+.nav__icon,
+.nav__icon::before,
+.nav__icon::after {
+  width: 1.7rem;
+  height: 2px;
+  background-color: black;
+  display: inline-block;
+}
+
+.nav__icon::before,
+.nav__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.2s;
+}
+.nav__icon::before {
+  top: -0.4rem;
+}
+
+.nav__icon::after {
+  top: 0.4rem;
+}
+
+.nav__button:hover .nav__icon::before {
+  top: -0.5rem;
+}
+
+.nav__button:hover .nav__icon::after {
+  top: 0.5rem;
+}
+
+.nav__background {
+  background: blue;
+  border-radius: 50%;
+  background-image: radial-gradient(#a23f25, #502417);
+  z-index: 1000;
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.nav__checkbox:checked ~ .nav__background {
+  transform: scale(80);
+}
+
+.nav__checkbox:checked ~ .nav__menu {
+  opacity: 1;
+  width: 100%;
+}
+
+.nav__checkbox:checked + .nav__button .nav__icon {
+  background-color: transparent;
+}
+
+.nav__checkbox:checked + .nav__button .nav__icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.nav__checkbox:checked + .nav__button .nav__icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
+.nav__menu {
+  z-index: 1500;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.nav__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.nav__item {
+  padding: 1rem;
 }
