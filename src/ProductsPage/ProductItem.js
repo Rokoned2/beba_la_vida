@@ -40,7 +40,7 @@ const ProductItem = ({
 
       <div className="pt-3 pb-2">
         <h3 className="text-lg italic text-primary">{category}</h3>
-        <h3 className="text-xl font-medium">{name}</h3>
+        <h3 className="text-xl font-medium cursor-pointer">{name}</h3>
         <p className="italic text-sm pt-2 ">S/ {price}</p>
         <button
           className="btn btn--rounded-full  relative md:hidden mt-3 px-6 py-2 bg-primary rounded-full text-white btn--primary-dark shadow-lg "

@@ -19,10 +19,10 @@ const CartModalItem = ({ id, photo, name, amount, price, dispatch }) => {
     >
       <div className="flex w-4/6 sm:w-3/6">
         <div className="pr-3 sm:pl-3 ">
-          <img src={photo} alt="" className="w-20 h-20" />
+          <img src={photo} alt="" className="w-20 h-20 cursor-pointer" />
         </div>
         <div className="flex flex-col">
-          <b className="font-bold text-sm">{name}</b>
+          <b className="font-bold text-sm cursor-pointer">{name}</b>
         </div>
       </div>
       <div className="w-1/6 sm:w-2/6 flex items-center justify-center">

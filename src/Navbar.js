@@ -50,17 +50,17 @@ const Navbar = ({ showModal }) => {
           </div>
 
           <div className="nav__menu h-screen fixed top-0 left-0 w-0 text-2xl text-white md:hidden">
-            <ul className="nav__list">
-              <li className="nav__item ">
+            <ul className="absolute-center text-center w-full">
+              <li className="p-4">
                 <p className="nav__link">INICIO</p>
               </li>
-              <li className="nav__item">
+              <li className="p-4">
                 <p className="nav__link">PRODUCTOS</p>
               </li>
-              <li className="nav__item">
+              <li className="p-4">
                 <p className="nav__link">BLOG</p>
               </li>
-              <li className="nav__item">
+              <li className="p-4">
                 <p className="nav__link">CONTACTO</p>
               </li>
             </ul>
